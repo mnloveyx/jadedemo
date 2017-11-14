@@ -1,1 +1,32 @@
 name: "i am is config client,change bbb"
+spring:
+    jpa:
+        show-sql: true
+        hibernate:
+         ddl-auto: none # auto ddl operator
+        database-platform: org.hibernate.dialect.MySQL5Dialect ## stripped before adding them to the entity manager)
+        open-in-view: true  ##spring boot jpa session   
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver # mysql jdbc driver
+        #localdb
+        url: jdbc:mysql://192.168.0.60:3306/assign_dev?useUnicode=true&characterEncoding=utf-8 # mysql server url
+        username: root # mysql username
+        password: root # mysql password
+         #devdb
+#        url: jdbc:mysql://192.168.1.102:3306/jadeplatform_dev?useUnicode=true&characterEncoding=utf-8 # mysql server url
+#        username: jfoatest # mysql username
+#        password: jfoatest # mysql password
+        max-active: 20 # jdbc connection pool , default 100
+        max-idle: 10 # default maxActive:100
+        min-idle: 2 # default initialSize:10
+        initial-size: 2 # default 10
+        idle-timeout: 60000
+        max-wait: 5000 # default 30000 (30 seconds)
+        test-on-borrow: true
+        test-while-idle: true
+        validation-query: 'select 1'
+        initialize: false
+#        test-on-return: false
+#        time-between-eviction-runs-millis: 18800
+#        jdbc-interceptors: -ConnectionState
+#                           -SlowQueryReport(threshold=0)
