@@ -9,7 +9,8 @@ spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver # mysql jdbc driver
         #localdb
-        url: jdbc:mysql://192.168.0.60:3306/assign_dev?useUnicode=true&characterEncoding=utf-8 # mysql server url
+      #  url: jdbc:mysql://192.168.0.60:3306/assign_dev?useUnicode=true&characterEncoding=utf-8 # mysql server url
+        url: jdbc:mysql://192.168.1.102:3306/assign_dev?useOldAliasMetadataBehavior=true&amp;zeroDateTimeBehavior=convertToNull
         username: root # mysql username
         password: root # mysql password
          #devdb
